@@ -82,3 +82,7 @@ body {
   .music-track button:hover {
     background-color: #1976D2;
   }
+  
+  #file-input {
+    margin: 20px 0;
+  }
