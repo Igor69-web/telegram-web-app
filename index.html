@@ -3,50 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram Web App</title>
+  <title>Калькулятор</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-container">
-    <div class="navbar">
-      <button id="calculator-btn">Калькулятор</button>
-      <button id="music-btn">Музыкальный плеер</button>
-    </div>
-
-    <!-- Страница с калькулятором -->
-    <div id="calculator-page" class="page">
-      <h2>Калькулятор</h2>
-      <div class="calculator">
-        <input id="display" type="text" disabled />
-        <div class="buttons">
-          <button onclick="appendToDisplay('1')">1</button>
-          <button onclick="appendToDisplay('2')">2</button>
-          <button onclick="appendToDisplay('3')">3</button>
-          <button onclick="appendToDisplay('+')">+</button>
-          <button onclick="appendToDisplay('4')">4</button>
-          <button onclick="appendToDisplay('5')">5</button>
-          <button onclick="appendToDisplay('6')">6</button>
-          <button onclick="appendToDisplay('-')">-</button>
-          <button onclick="appendToDisplay('7')">7</button>
-          <button onclick="appendToDisplay('8')">8</button>
-          <button onclick="appendToDisplay('9')">9</button>
-          <button onclick="appendToDisplay('*')">*</button>
-          <button onclick="appendToDisplay('0')">0</button>
-          <button onclick="clearDisplay()">C</button>
-          <button onclick="calculate()">=</button>
-          <button onclick="appendToDisplay('/')">/</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Страница с музыкальным плеером -->
-    <div id="music-page" class="page">
-      <h2>Музыкальный плеер</h2>
-      <input type="file" id="file-input" accept="audio/*" multiple />
-      <button id="load-tracks-btn">Загрузить треки</button>
-      <div id="music-list">
-        <!-- Список загруженных треков будет отображаться здесь -->
-      </div>
+  <div class="calculator">
+    <h2>Калькулятор</h2>
+    <input id="display" type="text" disabled />
+    <div class="buttons">
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="appendToDisplay('/')">/</button>
     </div>
   </div>
 

@@ -2,45 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: #f4f4f9;
   }
   
-  .app-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .page {
-    display: none;
-  }
-  
-  .page.active {
-    display: block;
-  }
-  
   .calculator {
-    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
   .calculator input {
@@ -48,41 +22,25 @@ body {
     padding: 10px;
     font-size: 24px;
     text-align: right;
+    margin-bottom: 10px;
   }
   
-  .calculator .buttons {
+  .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin-top: 20px;
+    gap: 10px;
   }
   
-  .calculator button {
-    padding: 20px;
+  button {
+    padding: 15px;
     font-size: 20px;
-  }
-  
-  #music-list {
-    margin-top: 20px;
-  }
-  
-  .music-track {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
     border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
   }
   
-  .music-track button {
-    background-color: #2196F3;
-  }
-  
-  .music-track button:hover {
-    background-color: #1976D2;
-  }
-  
-  #file-input {
-    margin: 20px 0;
+  button:hover {
+    background-color: #45a049;
   }
