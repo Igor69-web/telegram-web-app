@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Web App</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: var(--tg-theme-bg-color, #ffffff); /* Используем тему Telegram */
-            color: var(--tg-theme-text-color, #000000);  /* Цвет текста */
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: var(--tg-theme-button-color, #0088cc); /* Цвет кнопки */
-            color: var(--tg-theme-button-text-color, #ffffff); /* Цвет текста на кнопке */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <title>Telegram Web App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Привет, Telegram!</h1>
-    <p>Приложение интегрировано с Telegram.</p>
-    <button onclick="sendMessage()">Отправить сообщение</button>
+  <div class="app-container">
+    <div class="navbar">
+      <button id="calculator-btn">Калькулятор</button>
+      <button id="music-btn">Музыкальный плеер</button>
+    </div>
 
-    <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand();  // Расширяем Web App на весь экран
+    <div id="calculator-page" class="page">
+      <h2>Калькулятор</h2>
+      <div class="calculator">
+        <input id="display" type="text" disabled />
+        <div class="buttons">
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="appendToDisplay('+')">+</button>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="appendToDisplay('-')">-</button>
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+          <button onclick="appendToDisplay('*')">*</button>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="appendToDisplay('/')">/</button>
+        </div>
+      </div>
+    </div>
 
-        function sendMessage() {
-            tg.sendData("Привет из Web App!");  // Отправляем данные в Telegram бота
-        }
+    <div id="music-page" class="page">
+      <h2>Музыкальный плеер</h2>
+      <div id="music-list">
+        <!-- Список треков будет загружаться динамически -->
+      </div>
+    </div>
+  </div>
 
-        // Применяем тему
-        document.body.style.backgroundColor = tg.themeParams.bg_color;
-        document.body.style.color = tg.themeParams.text_color;
-        document.querySelector("button").style.backgroundColor = tg.themeParams.button_color;
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
